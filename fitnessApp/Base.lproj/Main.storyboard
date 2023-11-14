@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AEj-v9-UtC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="Ozd-8P-hbG">
+            <objects>
+                <viewController id="xGu-GH-Wlo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSG-bj-yUY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="j0T-DY-5s1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" id="uaC-uy-kUh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dms-Yj-m9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-106"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="3IE-Ft-Kmf">
+            <objects>
+                <viewController id="aeB-kc-zT2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDp-qw-V7T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00v-MO-39a">
+                                <rect key="frame" x="105" y="690" width="183" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Empty Workout"/>
+                                <connections>
+                                    <segue destination="fL8-Ra-KqL" kind="show" id="Jpo-5b-WAK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LMX-Od-Xdm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LMX-Od-Xdm" firstAttribute="bottom" secondItem="00v-MO-39a" secondAttribute="bottom" constant="44" id="4WT-R0-O7A"/>
+                            <constraint firstItem="LMX-Od-Xdm" firstAttribute="trailing" secondItem="00v-MO-39a" secondAttribute="trailing" constant="105" id="IEw-aT-2Ac"/>
+                            <constraint firstItem="00v-MO-39a" firstAttribute="leading" secondItem="LMX-Od-Xdm" secondAttribute="leading" constant="105" id="LrF-Nj-F8N"/>
+                            <constraint firstItem="00v-MO-39a" firstAttribute="top" secondItem="LMX-Od-Xdm" secondAttribute="top" constant="631" id="X7o-Mh-lfn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Yjz-xD-xdE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZH-SJ-IUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258.77862595419845" y="542.25352112676057"/>
+        </scene>
+        <!--Exercise Input View Controller-->
+        <scene sceneID="zc2-Ak-dwU">
+            <objects>
+                <viewController id="fL8-Ra-KqL" customClass="ExerciseInputViewController" customModule="fitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmf-bv-7R8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv2-os-TPV">
+                                <rect key="frame" x="316" y="739.66666666666663" width="61" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PT4-ye-fVg">
+                                <rect key="frame" x="34" y="87" width="75" height="136.33333333333334"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vm2-r2-9dV">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="fL8-Ra-KqL" eventType="touchUpInside" id="Crc-dg-ElS"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7I-Xb-79R">
+                                        <rect key="frame" x="0.0" y="34.333333333333336" width="75" height="34.000000000000007"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-Zb-alf">
+                                        <rect key="frame" x="0.0" y="68.333333333333329" width="75" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-fu-Xxw">
+                                        <rect key="frame" x="0.0" y="102.33333333333333" width="75" height="33.999999999999986"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qp7-VK-abw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qp7-VK-abw" firstAttribute="bottom" secondItem="kv2-os-TPV" secondAttribute="bottom" constant="68" id="54f-8F-xAd"/>
+                            <constraint firstItem="kv2-os-TPV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qp7-VK-abw" secondAttribute="leading" symbolic="YES" id="oaB-QL-dIJ"/>
+                            <constraint firstItem="kv2-os-TPV" firstAttribute="trailing" secondItem="tmf-bv-7R8" secondAttribute="trailingMargin" id="yDy-rO-6MN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DgX-ba-BEY"/>
+                    <connections>
+                        <outlet property="addButton" destination="Vm2-r2-9dV" id="oLJ-l6-4cc"/>
+                        <outlet property="exNameField" destination="c7I-Xb-79R" id="Div-RL-4IO"/>
+                        <outlet property="exRepField" destination="qeG-Zb-alf" id="rIe-hY-hz1"/>
+                        <outlet property="exWeightField" destination="fO4-fu-Xxw" id="CEh-A6-tgn"/>
+                        <outlet property="stackView" destination="PT4-ye-fVg" id="8bA-Cm-Tng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbe-TO-UXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.6641221374045" y="541.54929577464793"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="37s-DR-h1P">
+            <objects>
+                <tabBarController id="AEj-v9-UtC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dg2-i4-ldQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aeB-kc-zT2" kind="relationship" relationship="viewControllers" id="gMq-Yt-Gk1"/>
+                        <segue destination="xGu-GH-Wlo" kind="relationship" relationship="viewControllers" id="KIP-NU-Z78"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPX-Id-DHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-711" y="208"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
